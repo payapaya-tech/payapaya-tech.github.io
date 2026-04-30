@@ -12,16 +12,19 @@ payapaya のコーポレートサイト。Next.js の静的書き出し（`outpu
 - `components/ui/` — shadcn/ui で生成したコンポーネント
 - `lib/` — `cn()` などの共通ユーティリティ
 - `public/` — 画像など静的アセット
-- `out/` — `pnpm build` の生成物（gitignore 済み）
+- `out/` — `npm run build` の生成物（gitignore 済み）
 
 ## 開発コマンド
 
-- `pnpm dev` — 開発サーバー起動（http://localhost:3000）
-- `pnpm build` — 静的書き出しビルド（`out/` を生成）
-- `pnpm start` — 注意: `output: 'export'` 構成では使えないため利用しない
-- `pnpm lint` — ESLint
-- `pnpm dlx shadcn@latest add <component>` — shadcn コンポーネント追加
-- `pnpm dlx serve out` — ビルド結果のローカル配信（動作確認用）
+パッケージマネージャは **npm** に統一する。`pnpm` / `yarn` は使わない。
+
+- `npm install` — 依存インストール
+- `npm run dev` — 開発サーバー起動（http://localhost:3000）
+- `npm run build` — 静的書き出しビルド（`out/` を生成）
+- `npm run start` — 注意: `output: 'export'` 構成では使えないため利用しない
+- `npm run lint` — ESLint
+- `npx shadcn@latest add <component>` — shadcn コンポーネント追加
+- `npx serve out` — ビルド結果のローカル配信（動作確認用）
 
 ## コーディング規約
 
