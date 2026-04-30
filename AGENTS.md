@@ -4,20 +4,40 @@
 
 ## プロジェクト概要
 
-（プロジェクトの目的・スコープをここに記載）
+payapaya のコーポレートサイト。Next.js の静的書き出し（`output: 'export'`）で生成し、`out/` を任意の静的ホスティング（Cloudflare Pages / Netlify / S3 / GitHub Pages など）にデプロイする想定。デプロイ先は未定で、CI も現時点では用意していない。
 
 ## ディレクトリ構成
 
-（主要なディレクトリと役割をここに記載）
+- `app/` — App Router のページ・レイアウト・グローバル CSS
+- `components/ui/` — shadcn/ui で生成したコンポーネント
+- `lib/` — `cn()` などの共通ユーティリティ
+- `public/` — 画像など静的アセット
+- `out/` — `pnpm build` の生成物（gitignore 済み）
 
 ## 開発コマンド
 
-（ビルド・テスト・lint等のコマンドをここに記載）
+- `pnpm dev` — 開発サーバー起動（http://localhost:3000）
+- `pnpm build` — 静的書き出しビルド（`out/` を生成）
+- `pnpm start` — 注意: `output: 'export'` 構成では使えないため利用しない
+- `pnpm lint` — ESLint
+- `pnpm dlx shadcn@latest add <component>` — shadcn コンポーネント追加
+- `pnpm dlx serve out` — ビルド結果のローカル配信（動作確認用）
 
 ## コーディング規約
 
-（言語・フレームワーク固有の規約をここに記載）
+- TypeScript / React 19 / Next.js 16（App Router）
+- Tailwind CSS v4（PostCSS プラグイン方式）。クラス順は `prettier-plugin-tailwindcss` に任せる
+- shadcn/ui は `base-nova` プリセット（Base UI 由来）。Button などの primitive ラッパーは `components/ui/` 配下に置く
+- 整形は Prettier、Lint は Next.js の ESLint フラットコンフィグに従う
+- import エイリアスは `@/*`（リポジトリ直下が基点）
 
 ## 注意事項
 
-（エージェントが守るべき制約事項をここに記載）
+- **静的書き出し前提**のため、以下の Next.js 機能は使えない:
+  - API Routes / Route Handlers のランタイム実行
+  - Middleware
+  - ISR / `revalidate`
+  - Server Actions
+- 動的ルート（`[slug]` 等）を増やすときは `generateStaticParams` で全パスを列挙すること
+- `next/image` は `images.unoptimized: true` 設定なので最適化されない。サイズや形式はソース側で整える
+- `node_modules` は devcontainer の named volume にマウントされているので、サブディレクトリにプロジェクトを切り出さない
