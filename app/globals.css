@@ -128,3 +128,13 @@
     @apply font-sans;
   }
 }
+
+.hero-scale {
+  --hero-u: 1px;
+}
+
+@media (max-width: 996px) {
+  .hero-scale {
+    --hero-u: calc(100vw / 996);
+  }
+}
