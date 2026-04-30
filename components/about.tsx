@@ -35,7 +35,7 @@ export function About() {
           >
             ぱやぱやについて
           </h2>
-          <p className="mt-12 text-sm leading-[2.47] tracking-[0.23em] sm:text-base">
+          <p className="mt-12 text-sm leading-[2] tracking-[0.23em] sm:text-base">
             夫婦でエンジニアをしています。
             <br />
             プロジェクトに応じた技術支援を通じて、
