@@ -138,3 +138,73 @@
     --hero-u: calc(100vw / 996);
   }
 }
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -14px);
+  }
+}
+
+@keyframes float-medium {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(6px, -10px) rotate(4deg);
+  }
+}
+
+@keyframes float-fast {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(-6px, -6px) rotate(-3deg);
+  }
+  66% {
+    transform: translate(5px, -10px) rotate(3deg);
+  }
+}
+
+.float-slow {
+  animation: float-slow 9s ease-in-out infinite;
+}
+
+.float-medium {
+  animation: float-medium 6.5s ease-in-out infinite;
+}
+
+.float-fast {
+  animation: float-fast 4.8s ease-in-out infinite;
+}
+
+.fade-up[data-fade="hidden"] {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.fade-up[data-fade="visible"] {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 720ms ease-out,
+    transform 720ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce), (scripting: none) {
+  .float-slow,
+  .float-medium,
+  .float-fast {
+    animation: none;
+  }
+  .fade-up[data-fade="hidden"] {
+    opacity: 1;
+    transform: none;
+  }
+}
