@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "payapaya",
-  description: "payapaya コーポレートサイト",
+  title: "ぱやぱや",
+  description: "ぱやぱやコーポレートサイト",
 };
 
 export default function RootLayout({

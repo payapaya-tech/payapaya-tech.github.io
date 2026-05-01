@@ -18,13 +18,7 @@ export function Contact() {
         aria-hidden
       >
         <defs>
-          <linearGradient
-            id="contact-wave"
-            x1="0"
-            y1="0"
-            x2="1"
-            y2="0"
-          >
+          <linearGradient id="contact-wave" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stopColor="#E1EDF9" />
             <stop offset="100%" stopColor="#EFF8F8" />
           </linearGradient>
@@ -68,18 +62,20 @@ export function Contact() {
           <h2
             className={`${kiwiMaru.className} mt-3 text-2xl font-light tracking-[0.22em] sm:text-3xl`}
           >
-            お気軽にどうぞ
+            お問い合わせ
           </h2>
           <p className="mx-auto mt-10 max-w-md text-sm leading-[2.1] tracking-[0.15em] text-[#4F5E6A]">
-            ご相談・お見積もり・雑談まで。
+            お仕事のご依頼はこちらから。
             <br />
             まずはお話を伺うところから始めます。
           </p>
           <a
-            href="mailto:hello@payapaya.dev"
+            href="https://forms.gle/REPLACE_ME"
+            target="_blank"
+            rel="noopener noreferrer"
             className={`${kiwiMaru.className} group mt-12 inline-flex items-center gap-3 rounded-full bg-[#4A6680] px-12 py-5 text-sm tracking-[0.22em] text-white shadow-[0_10px_28px_rgba(74,102,128,0.32)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#3D5A75] hover:shadow-[0_16px_36px_rgba(74,102,128,0.42)]`}
           >
-            <span>メールでお問い合わせ</span>
+            <span>お問い合わせフォーム</span>
             <span
               className="transition-transform duration-300 group-hover:translate-x-1"
               aria-hidden
@@ -87,9 +83,6 @@ export function Contact() {
               →
             </span>
           </a>
-          <p className="mt-8 text-xs tracking-[0.20em] text-[#5E7C8A]">
-            hello@payapaya.dev
-          </p>
         </FadeIn>
       </div>
     </section>

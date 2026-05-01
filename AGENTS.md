@@ -4,7 +4,7 @@
 
 ## プロジェクト概要
 
-payapaya のコーポレートサイト。Next.js の静的書き出し（`output: 'export'`）で生成し、`out/` を任意の静的ホスティング（Cloudflare Pages / Netlify / S3 / GitHub Pages など）にデプロイする想定。デプロイ先は未定で、CI も現時点では用意していない。
+ぱやぱや のコーポレートサイト。Next.js の静的書き出し（`output: 'export'`）で生成し、`out/` を任意の静的ホスティング（Cloudflare Pages / Netlify / S3 / GitHub Pages など）にデプロイする想定。デプロイ先は未定で、CI も現時点では用意していない。
 
 ## ディレクトリ構成
 

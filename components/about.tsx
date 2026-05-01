@@ -28,10 +28,10 @@ export function About() {
           fill="#E1EDF9"
         />
       </svg>
-      <div className="px-6 pb-12 pt-40 sm:pb-16 sm:pt-56">
+      <div className="px-6 pt-40 pb-12 sm:pt-56 sm:pb-16">
         <div className="relative mx-auto max-w-3xl">
           <svg
-            className="pointer-events-none absolute left-1/2 top-1/2 block h-[360px] w-[800px] -translate-x-1/2 -translate-y-1/2"
+            className="pointer-events-none absolute top-1/2 left-1/2 block h-[360px] w-[800px] -translate-x-1/2 -translate-y-1/2"
             viewBox="0 0 800 360"
             aria-hidden
           >
@@ -47,13 +47,13 @@ export function About() {
             </g>
           </svg>
 
-          <div className="relative px-2 pb-6 pt-8 text-center sm:px-8 sm:pb-10 sm:pt-14">
+          <div className="relative px-2 pt-10 pb-6 text-center sm:px-8 sm:pt-14 sm:pb-10">
             <h2
               className={`${kiwiMaru.className} text-2xl font-light tracking-[0.20em] sm:text-3xl`}
             >
               ぱやぱやについて
             </h2>
-            <p className="mt-12 text-sm leading-[2] tracking-[0.23em] sm:text-base">
+            <p className="mt-8 text-sm leading-[2] tracking-[0.23em] sm:text-base">
               夫婦でエンジニアをしています。
               <br />
               プロジェクトに応じた技術支援を通じて、

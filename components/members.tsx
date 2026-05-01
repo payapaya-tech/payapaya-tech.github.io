@@ -16,8 +16,6 @@ type Member = {
   skills: string[];
   bio: string;
   avatar: string;
-  tilt: string;
-  chipTones: string[];
 };
 
 const members: Member[] = [
@@ -27,17 +25,13 @@ const members: Member[] = [
     skills: ["AWS"],
     bio: "ダミーテキスト。ダミーテキスト、ダミーテキスト。ダミーテキスト・ダミーテキスト、ダミーテキスト。",
     avatar: "/members/kaori.svg",
-    tilt: "2deg",
-    chipTones: ["#A8D3D3"],
   },
   {
     name: "中山 勝則",
     yomi: "Katsunori Nakayama",
     skills: ["フロントエンド", "EM"],
-    bio: "ダミーテキスト。ダミーテキスト、ダミーテキスト。ダミーテキスト・ダミーテキスト、ダミーテキスト。",
+    bio: "開発者歴 15 年以上。BtoB / BtoC を問わずフロントエンドを軸に、EM などのマネジメントも担当。規模やフェーズの異なるチームに関わってきました。技術と組織の両面から、働きやすい環境づくりを大切にしています。",
     avatar: "/members/katsunori.svg",
-    tilt: "-2deg",
-    chipTones: ["#B5D5E8", "#E1EDF9"],
   },
 ];
 
@@ -86,11 +80,8 @@ export function Members() {
                   i === 1 ? "sm:flex-row-reverse" : ""
                 }`}
               >
-                <article
-                  className="shrink-0 rounded-[22px] bg-white p-4 shadow-[0_22px_44px_rgba(46,86,90,0.16)] transition-transform duration-500 ease-out hover:rotate-0 hover:-translate-y-2"
-                  style={{ transform: `rotate(${m.tilt})` }}
-                >
-                  <div className="overflow-hidden rounded-[14px] bg-[#EFF8F8]">
+                <article className="shrink-0 rounded-full bg-white p-4 shadow-[0_22px_44px_rgba(46,86,90,0.16)]">
+                  <div className="overflow-hidden rounded-full bg-[#EFF8F8]">
                     <Image
                       src={m.avatar}
                       alt=""
@@ -100,12 +91,8 @@ export function Members() {
                     />
                   </div>
                 </article>
-                <div
-                  className={`w-full max-w-md text-center sm:pt-6 ${
-                    i === 0 ? "sm:text-left" : "sm:text-right"
-                  }`}
-                >
-                  <p className="text-[11px] tracking-[0.30em] text-[#3D6A70] uppercase">
+                <div className="w-full max-w-md text-center sm:pt-6 sm:text-left">
+                  <p className="text-[10px] tracking-[0.30em] text-[#3D6A70]/70 uppercase">
                     {m.yomi}
                   </p>
                   <h3
@@ -113,22 +100,11 @@ export function Members() {
                   >
                     {m.name}
                   </h3>
-                  <ul
-                    className={`mt-5 flex flex-wrap gap-2 ${
-                      i === 0
-                        ? "justify-center sm:justify-start"
-                        : "justify-center sm:justify-end"
-                    }`}
-                  >
-                    {m.skills.map((s, j) => (
+                  <ul className="mt-5 flex flex-wrap justify-center gap-2 sm:justify-start">
+                    {m.skills.map((s) => (
                       <li
                         key={s}
-                        className="rounded-full px-4 py-1.5 text-xs tracking-[0.10em] text-[#2F4046] shadow-[0_2px_6px_rgba(46,86,90,0.08)]"
-                        style={{
-                          backgroundColor:
-                            m.chipTones[j % m.chipTones.length] + "AA",
-                          transform: `rotate(${j % 2 === 0 ? -2 : 3}deg)`,
-                        }}
+                        className="rounded-full border border-[#2F4046]/20 bg-white px-4 py-1.5 text-xs tracking-[0.10em] text-[#2F4046]"
                       >
                         {s}
                       </li>
