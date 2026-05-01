@@ -21,8 +21,8 @@ export function SubpageLayout({
 }) {
   return (
     <>
-      <header className="border-b border-[#E1EDF9] bg-white px-6 py-6">
-        <div className="mx-auto max-w-5xl">
+      <header className="border-b border-[#E1EDF9] bg-white px-6 py-3">
+        <div className="mx-auto flex max-w-5xl justify-center">
           <Link
             href="/"
             className="inline-flex items-center transition hover:opacity-70"
@@ -38,7 +38,7 @@ export function SubpageLayout({
           </Link>
         </div>
       </header>
-      <section className="relative flex h-32 items-center justify-center overflow-x-clip bg-gradient-to-br from-[#F0F6FC] via-[#E1EDF9] to-[#C5DAEC] px-6 text-[#3F484E]">
+      <section className="relative flex h-40 items-center justify-center overflow-x-clip bg-gradient-to-br from-[#F0F6FC] via-[#E1EDF9] to-[#C5DAEC] px-6 text-[#3F484E] sm:h-44">
         <span
           className="pointer-events-none absolute -top-24 left-[4%] block h-80 w-80 rounded-full bg-white/35"
           aria-hidden
