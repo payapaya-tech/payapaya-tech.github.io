@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Kiwi_Maru } from "next/font/google";
 import { Contact } from "@/components/contact";
@@ -24,9 +25,16 @@ export function SubpageLayout({
         <div className="mx-auto max-w-5xl">
           <Link
             href="/"
-            className={`${kiwiMaru.className} text-base tracking-[0.28em] text-[#584C4F] transition hover:text-[#3D5A75]`}
+            className="inline-flex items-center transition hover:opacity-70"
           >
-            ぱやぱや
+            <Image
+              src="/logo.png"
+              alt="ぱやぱや"
+              width={146}
+              height={38}
+              priority
+              className="h-[38px] w-auto"
+            />
           </Link>
         </div>
       </header>

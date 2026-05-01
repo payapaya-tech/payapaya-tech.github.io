@@ -76,18 +76,18 @@ export function Members() {
           {members.map((m, i) => (
             <FadeIn key={m.name} as="li" delay={i * 200}>
               <div
-                className={`flex flex-col items-center gap-10 sm:flex-row sm:items-start sm:justify-between sm:gap-12 ${
+                className={`flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-center sm:gap-16 ${
                   i === 1 ? "sm:flex-row-reverse" : ""
                 }`}
               >
-                <article className="shrink-0 rounded-full bg-white p-4 shadow-[0_22px_44px_rgba(46,86,90,0.16)]">
+                <article className="shrink-0 rounded-full bg-white p-3 shadow-[0_18px_36px_rgba(46,86,90,0.14)]">
                   <div className="overflow-hidden rounded-full bg-[#EFF8F8]">
                     <Image
                       src={m.avatar}
                       alt=""
-                      width={260}
-                      height={260}
-                      className="block aspect-square w-[220px] sm:w-[260px]"
+                      width={180}
+                      height={180}
+                      className="block aspect-square w-[140px] sm:w-[180px]"
                     />
                   </div>
                 </article>
