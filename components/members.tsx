@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Kiwi_Maru } from "next/font/google";
+import { HouseIcon, SparkleIcon } from "@phosphor-icons/react/dist/ssr";
 import { FadeIn } from "@/components/fade-in";
 
 const kiwiMaru = Kiwi_Maru({
@@ -16,6 +17,7 @@ type Member = {
   skills: string[];
   bio: string;
   avatar: string;
+  homepage?: string;
 };
 
 const members: Member[] = [
@@ -23,7 +25,7 @@ const members: Member[] = [
     name: "中山 かおり",
     yomi: "Kaori Nakayama",
     skills: ["AWS"],
-    bio: "ダミーテキスト。ダミーテキスト、ダミーテキスト。ダミーテキスト・ダミーテキスト、ダミーテキスト。",
+    bio: "AWSを中心としたクラウドインフラの設計・構築・運用に対応。短期間でキャッチアップし、プロジェクト推進に貢献。運用の標準化・自動化による改善を得意とし、年間1000時間以上の工数削減。AWS SAP保有、RFI/RFPなど上流工程にも対応可能。",
     avatar: "/members/kaori.svg",
   },
   {
@@ -32,6 +34,7 @@ const members: Member[] = [
     skills: ["フロントエンド", "EM"],
     bio: "開発者歴 15 年以上。BtoB / BtoC を問わずフロントエンドを軸に、EM などのマネジメントも担当。規模やフェーズの異なるチームに関わってきました。技術と組織の両面から、働きやすい環境づくりを大切にしています。",
     avatar: "/members/katsunori.svg",
+    homepage: "https://rinotsuka.github.io/",
   },
 ];
 
@@ -100,19 +103,31 @@ export function Members() {
                   >
                     {m.name}
                   </h3>
-                  <ul className="mt-5 flex flex-wrap justify-center gap-2 sm:justify-start">
-                    {m.skills.map((s) => (
-                      <li
-                        key={s}
-                        className="rounded-full border border-[#2F4046]/20 bg-white px-4 py-1.5 text-xs tracking-[0.10em] text-[#2F4046]"
-                      >
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="mt-5 flex items-center justify-center gap-2 text-xs tracking-[0.12em] text-[#2F4046] sm:justify-start">
+                    <SparkleIcon
+                      size={14}
+                      weight="regular"
+                      className="text-[#3D6A70]"
+                    />
+                    {m.skills.join("、")}
+                  </p>
                   <p className="mt-6 text-sm leading-[2] tracking-[0.12em] text-[#46606A]">
                     {m.bio}
                   </p>
+                  {m.homepage && (
+                    <div className="mt-6 flex justify-center sm:justify-start">
+                      <a
+                        href={m.homepage}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${m.name} のホームページ`}
+                        className="inline-flex items-center gap-2 rounded-full border border-[#3D6A70]/30 bg-white px-4 py-2 text-xs tracking-[0.18em] text-[#3D6A70] shadow-[0_4px_12px_rgba(46,86,90,0.08)] transition hover:border-[#3D6A70]/60 hover:text-[#2F4046] hover:shadow-[0_6px_16px_rgba(46,86,90,0.12)]"
+                      >
+                        <HouseIcon size={16} weight="regular" />
+                        ホームページ
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             </FadeIn>

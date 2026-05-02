@@ -28,22 +28,22 @@ const capabilities: Capability[] = [
   {
     icon: Laptop,
     title: "SESエンジニアリング",
-    description: "常駐 / 準委任での開発参画。\nフロント・バックエンド問わず対応します。",
+    description: "SES形式での開発参画にお応えします。",
   },
   {
     icon: HouseLine,
     title: "フルリモート",
-    description: "全国どこからでもご一緒できます。\n遠方でも変わらない品質で。",
+    description: "全国どこからでもご一緒できます。遠方でも変わらない品質で。",
   },
   {
     icon: Sparkle,
     title: "主体的に行動",
-    description: "指示待ちではなく、自ら課題を\n見つけて動きにいきます。",
+    description: "指示待ちではなく、自ら課題を見つけて動きにいきます。",
   },
   {
     icon: Lightning,
     title: "即戦力として参画",
-    description: "立ち上がりが早く、初日から\n開発を前に進める動きをします。",
+    description: "立ち上がりが早く、初日から開発を前に進める動きをします。",
   },
 ];
 
@@ -228,7 +228,7 @@ export function Process() {
                   >
                     {cap.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-[2] tracking-[0.10em] whitespace-pre-line text-[#5A6670]">
+                  <p className="mt-3 text-sm leading-[2] tracking-[0.10em] text-[#5A6670]">
                     {cap.description}
                   </p>
                 </div>
