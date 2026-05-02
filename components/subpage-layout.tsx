@@ -1,8 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
 import { Kiwi_Maru } from "next/font/google";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { SiteHeader } from "@/components/site-header";
 
 const kiwiMaru = Kiwi_Maru({
   weight: ["300"],
@@ -21,23 +20,7 @@ export function SubpageLayout({
 }) {
   return (
     <>
-      <header className="border-b border-[#E1EDF9] bg-white px-6 py-3">
-        <div className="mx-auto flex max-w-5xl justify-center">
-          <Link
-            href="/"
-            className="inline-flex items-center transition hover:opacity-70"
-          >
-            <Image
-              src="/logo.png"
-              alt="ぱやぱや"
-              width={146}
-              height={38}
-              priority
-              className="h-[38px] w-auto"
-            />
-          </Link>
-        </div>
-      </header>
+      <SiteHeader />
       <section className="relative flex h-40 items-center justify-center overflow-x-clip bg-gradient-to-br from-[#F0F6FC] via-[#E1EDF9] to-[#C5DAEC] px-6 text-[#3F484E] sm:h-44">
         <span
           className="pointer-events-none absolute -top-24 left-[4%] block h-80 w-80 rounded-full bg-white/35"
