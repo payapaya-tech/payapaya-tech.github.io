@@ -33,7 +33,7 @@ const capabilities: Capability[] = [
   {
     icon: HouseLine,
     title: "フルリモート",
-    description: "全国どこからでもご一緒できます。遠方でも変わらない品質で。",
+    description: "全国どこでもご一緒できます。遠方でも変わらない品質で。",
   },
   {
     icon: Sparkle,
@@ -179,11 +179,7 @@ export function Process() {
                   width={VIEWBOX_W}
                   height={VIEWBOX_H}
                 >
-                  <rect
-                    width={VIEWBOX_W}
-                    height={VIEWBOX_H}
-                    fill="black"
-                  />
+                  <rect width={VIEWBOX_W} height={VIEWBOX_H} fill="black" />
                   <path
                     ref={maskPathRef}
                     d={REVERSED_PATH_D}
