@@ -69,6 +69,7 @@ export function Contact() {
             <br />
             まずはお話を伺うところから始めます。
           </p>
+          {/*
           <a
             href="https://forms.gle/REPLACE_ME"
             target="_blank"
@@ -83,6 +84,14 @@ export function Contact() {
               →
             </span>
           </a>
+          */}
+          <button
+            type="button"
+            className={`${kiwiMaru.className} mt-12 inline-flex items-center justify-center rounded-full bg-[#B5C1CC] px-12 py-5 text-sm tracking-[0.22em] text-[#69777F] shadow-[0_10px_28px_rgba(181,193,204,0.32)]`}
+            disabled
+          >
+            ただいま受付を停止しています
+          </button>
         </FadeIn>
       </div>
     </section>
