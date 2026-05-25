@@ -28,7 +28,7 @@ export function About() {
           fill="#E1EDF9"
         />
       </svg>
-      <div className="px-6 pt-40 pb-12 sm:pt-56 sm:pb-16">
+      <div className="px-6 pt-40 pb-24 sm:pt-56 sm:pb-16">
         <div className="relative mx-auto max-w-3xl">
           <svg
             className="pointer-events-none absolute top-1/2 left-1/2 block h-[360px] w-[800px] -translate-x-1/2 -translate-y-1/2"
