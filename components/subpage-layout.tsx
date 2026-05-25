@@ -21,7 +21,7 @@ export function SubpageLayout({
   return (
     <>
       <SiteHeader />
-      <section className="relative flex h-40 items-center justify-center overflow-x-clip bg-gradient-to-br from-[#F0F6FC] via-[#E1EDF9] to-[#C5DAEC] px-6 text-[#3F484E] sm:h-44">
+      <section className="relative flex h-40 items-center justify-center overflow-clip bg-gradient-to-br from-[#F0F6FC] via-[#E1EDF9] to-[#C5DAEC] px-6 text-[#3F484E] sm:h-44">
         <span
           className="pointer-events-none absolute -top-24 left-[4%] block h-80 w-80 rounded-full bg-white/35"
           aria-hidden
