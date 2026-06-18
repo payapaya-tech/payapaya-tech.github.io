@@ -54,11 +54,11 @@ export function About() {
               ぱやぱやについて
             </h2>
             <p className="mt-8 text-sm leading-[2] tracking-[0.23em] sm:text-base">
-              夫婦でエンジニアをしています。
+              経験領域の異なるメンバーが、
               <br />
-              プロジェクトに応じた技術支援を通じて、
+              それぞれの強みを活かしながら、
               <br />
-              クライアントのビジネスニーズに応えます。
+              お客様の技術課題の解決を支援しています。
             </p>
           </div>
         </div>

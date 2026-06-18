@@ -67,11 +67,6 @@ export function Members() {
             >
               メンバー
             </h2>
-            <p
-              className={`${kiwiMaru.className} mt-6 inline-block rounded-full bg-[#EFF3F5] px-5 py-1.5 text-xs tracking-[0.22em] text-[#3D6A70] shadow-[0_4px_12px_rgba(46,86,90,0.08)]`}
-            >
-              夫婦ふたりで運営しています
-            </p>
           </div>
         </FadeIn>
 
