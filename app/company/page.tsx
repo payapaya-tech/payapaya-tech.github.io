@@ -24,7 +24,7 @@ const items: { label: string; value: React.ReactNode }[] = [
           rel="noopener noreferrer"
           className="underline underline-offset-4 transition-colors hover:text-[#5E7C8A]"
         >
-          ホームページ制作
+          秦野市のホームページ制作・運営サービス
         </a>
       </>
     ),
